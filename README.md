@@ -27,9 +27,7 @@
 │   │   └── command.go
 │   ├── config                   # 配置文件
 │   │   ├── common.go
-│   │   └── config.go
-│   └── log                      # 日志库，暂未使用
-│       └── log.go
+│   └── └── config.go
 └── README.md                    # readme
 ```
 
