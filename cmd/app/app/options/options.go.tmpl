@@ -16,11 +16,11 @@ func NewAppOptions() *AppOptions {
 }
 
 func (o *AppOptions) NewServer() (*command.Command, error) {
-	s := command.New()
+	c := command.New()
 	o.loadConfig(o.ConfFile)
-	s.Config = o.Config
+	c.Config = o.Config
 
-	return s, nil
+	return c, nil
 }
 
 func (o *AppOptions) loadConfig(configFile string) {

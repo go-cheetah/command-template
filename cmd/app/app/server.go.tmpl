@@ -21,7 +21,7 @@ func NewServerCommand() *cobra.Command {
 		Use:   "version",
 		Short: "Print the version of {{ .Title }}.",
 		Run: func(cmd *cobra.Command, args []string) {
-			cmd.Println("command")
+			cmd.Println("hank997")
 		},
 	}
 
@@ -31,7 +31,7 @@ func NewServerCommand() *cobra.Command {
 }
 
 func run(o *options.AppOptions) (err error) {
-	server, err := o.NewServer()
-	server.Run()
+	command, err := o.NewServer()
+	command.Run()
 	return
 }
