@@ -1,0 +1,23 @@
+package utils
+
+import (
+	"fmt"
+	"os"
+	"path/filepath"
+)
+
+func GetExecutablePath() (string, error) {
+	// 获取可执行文件的路径
+	exePath, err := os.Executable()
+	if err != nil {
+		return "", err
+	}
+
+	// 解析符号链接（如果有的话）
+	realPath, err := filepath.EvalSymlinks(exePath)
+	if err != nil {
+		return "", err
+	}
+
+	return filepath.Dir(realPath), nil
+}
